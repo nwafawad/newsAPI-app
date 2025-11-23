@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Global News Explorer</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for topics...">
+                <button onclick="handleSearch()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="news-grid" class="news-grid">
+            <p class="loading">Loading top stories...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Data provided by <a href="https://rapidapi.com" target="_blank">RapidAPI</a></p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
