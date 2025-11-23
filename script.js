@@ -10,7 +10,7 @@ async function fetchNews(query = 'Technology') {
             'x-rapidapi-host': CONFIG.API_HOST
         }
     };
-
+    // Show loading message
     try {
         newsGrid.innerHTML = '<div class="loading">Fetching latest updates...</div>';
         
@@ -22,8 +22,8 @@ async function fetchNews(query = 'Technology') {
 
         
         renderNews(responseData.data); 
-        
-    } catch (error) {
+    
+    } catch (error) { // Handle errors
         console.error(error);
         newsGrid.innerHTML = `
             <div class="error-message">
@@ -32,10 +32,10 @@ async function fetchNews(query = 'Technology') {
             </div>`;
     }
 }
-
+// Render news articles
 function renderNews(articles) {
     newsGrid.innerHTML = '';
-    
+// Handle no articles case
     if (!articles || articles.length === 0) {
         newsGrid.innerHTML = '<p>No articles found for this topic.</p>';
         return;
@@ -64,7 +64,7 @@ function renderNews(articles) {
     });
 }
 
-
+// Handle search form submission
 function handleSearch() {
     const query = document.getElementById('search-input').value;
     if (query.trim()) {
@@ -72,5 +72,5 @@ function handleSearch() {
     }
 }
 
-
+// initial fetch
 fetchNews('World News');
