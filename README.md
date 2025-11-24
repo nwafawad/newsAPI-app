@@ -1,6 +1,7 @@
 # Global News Explorer
 
-**🔴 Live Demo:** [http://3.92.185.255](http://3.92.185.255)
+**🔴 Live Demo:** [http://3.92.185.255](http://3.92.185.255)  
+**🎥 Video Demo:** [Watch on Loom](https://www.loom.com/share/21dc5e77b3534fc6a2970bf158ac5126)
 
 A responsive, real-time news aggregation dashboard that fetches live articles using the **Real-Time News Data API**. This project demonstrates modern frontend development practices, secure API handling, and a high-availability deployment architecture using Nginx and HAProxy.
 
